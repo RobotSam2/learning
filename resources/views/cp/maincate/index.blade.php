@@ -32,7 +32,7 @@
 				<tr>
 					<td>{{ $i++ }}</td>
 					<td>{{ $row->name }}</td>
-					<td>{{ count($row->teachers) }}</td>
+					<td>{{ count($row->categories) }}</td>
 					<td>{{ $row->updated_at }}</td>
 					<td style="white-space: nowrap; width: 1%;">
 						<div class="tabledit-toolbar btn-toolbar" style="text-align: left;">

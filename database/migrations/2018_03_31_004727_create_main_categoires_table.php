@@ -33,6 +33,6 @@ class CreateMainCategoiresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('main_categoires');
     }
 }

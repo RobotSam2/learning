@@ -10,7 +10,11 @@ class Category extends Model
     protected $table = 'categories';
     protected $dates = ['deleted_at'];
 
-    public function category(){
-        return $this->hasMany('App\Model\Category\Category', 'cate_id');
+     public function user(){
+        return $this->belongsTo('App\Model\User\User', 'user_id');
+    }
+
+    public function maincate(){
+        return $this->belongsTo('App\Model\Setup\Maincate', 'main_id');
     }
 }

@@ -10,7 +10,7 @@ class Maincate extends Model
     protected $table = 'main_categoires';
     protected $dates = ['deleted_at'];
 
-    public function maincate(){
-        return $this->hasMany('App\Model\Maincate\Maincate', 'cate_id');
+    public function category(){
+        return $this->hasMany('App\Model\Setup\Category', 'main_id');
     }
 }

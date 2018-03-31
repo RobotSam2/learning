@@ -27,7 +27,7 @@
 			{{ csrf_field() }}
 			
 			<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="name">ប្រភេទ ផលិតផលឆ្នាំ</label>
+				<label class="col-sm-2 form-control-label" for="name">ឈ្មោះប្រភេទផលិតផល</label>
 				<div class="col-sm-10">
 					<input 	id="name"
 							name="name"
@@ -40,9 +40,45 @@
 							
 				</div>
 			</div>
-			
-			
-			
+
+			<div class="form-group row">
+				<label for="position_id" class="col-sm-2 form-control-label">ប្រភេទផលិតផលដំបូង</label>
+				<div class="col-sm-10">
+					
+					<select name="main_id" class="form-control">	
+						
+						<option value="0" >ជ្រើសរើស</option>
+						<option value="0" >ជ្រើសរើស</option>
+						<option value="0" >ជ្រើសរើស</option>
+						<option value="0" >ជ្រើសរើស</option>						
+					</select>
+
+				</div>
+			</div>
+
+			<div class="form-group row">
+				<label for="position_id" class="col-sm-2 form-control-label">ខេត្តបម្រើការងារ</label>
+				<div class="col-sm-10">
+					
+					<select name="main_id" class="form-control">	
+						
+						@if($main_id != 0)
+							@php( $lable = DB::table('categoires')->find($main_id) )
+							@if( sizeof($lable) == 1 )
+								<option value="{{ $lable->id }}" >{{ $lable->name }}</option>
+							@endif
+						@endif
+						<option value="0" >ជ្រើសរើស</option>
+						@foreach( $main_categoires as $row)
+							@if($row->id != $main_id)
+								<option value="{{ $row->id }}" >{{ $row->name }}</option>
+							@endif
+						@endforeach
+					</select>
+
+				</div>
+			</div>
+									
 			<div class="form-group row">
 				<label class="col-sm-2 form-control-label"></label>
 				<div class="col-sm-10">
@@ -50,6 +86,7 @@
 					<button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> បង្កើត</button>
 				</div>
 			</div>
+			
 		</form>
 	</div>
 

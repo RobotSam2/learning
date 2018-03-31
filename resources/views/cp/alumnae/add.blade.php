@@ -1,5 +1,5 @@
 @extends('cp.alumnae.main')
-@section ('section-title', 'Add New')
+@section ('section-title', 'បង្កើតថ្មី')
 @section ('section-css')
 	<link href="{{ asset ('public/cp/css/plugin/fileinput/fileinput.min.css') }}" media="all" rel="stylesheet" type="text/css"/>
     <link href="{{ asset ('public/cp/css/plugin/fileinput/theme.css') }}" media="all" rel="stylesheet" type="text/css"/>

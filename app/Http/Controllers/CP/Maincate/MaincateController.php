@@ -39,9 +39,10 @@ class MaincateController extends Controller
         $now        = date('Y-m-d H:i:s');
 
         $data = array(
-                    'name' =>   $request->input('name'),
-                    'creator_id' => $user_id,
-                    'created_at' => $now
+                    'name'      => $request->input('name'),
+                    'main_id'   => $request->input('main_id'),
+                    'updater_id' => $user_id,
+                    'updated_at' => $now
                 );
         
         Session::flash('invalidData', $data );
@@ -49,6 +50,7 @@ class MaincateController extends Controller
                         $request->all(), 
                         [
                             'name' => 'required',
+                            'main_id' => 'required',
                         ])->validate();
        
 		$id=Model::insertGetId($data);
@@ -68,7 +70,8 @@ class MaincateController extends Controller
         $now        = date('Y-m-d H:i:s');
 
         $data = array(
-                    'name' =>   $request->input('name'),
+                    'name'      =>   $request->input('name'),
+                    'main_id'   => $request->input('main_id'),
                     'updater_id' => $user_id,
                     'updated_at' => $now
                 );
@@ -76,7 +79,8 @@ class MaincateController extends Controller
         Validator::make(
                         $request->all(), 
                         [
-                            'name' => 'required'
+                            'name' => 'required',
+                            'main_id' => 'required'
                         ])->validate();
        
         Model::where('id', $id)->update($data);
