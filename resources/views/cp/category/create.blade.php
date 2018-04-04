@@ -17,10 +17,12 @@
 		@include('cp.layouts.error')
 
 		@php ($name = "")
+		@php ($main_id = "")
 		
        	@if (Session::has('invalidData'))
             @php ($invalidData = Session::get('invalidData'))
             @php ($name = $invalidData['name'])
+			@php ($main_id = $invalidData['main_id'])
             
        	@endif
 		<form id="form" action="{{ route($route.'.store') }}" name="form" method="POST"  enctype="multipart/form-data">
@@ -45,39 +47,27 @@
 				<label for="position_id" class="col-sm-2 form-control-label">ប្រភេទផលិតផលដំបូង</label>
 				<div class="col-sm-10">
 					
-					<select name="main_id" class="form-control">	
-						
-						<option value="0" >ជ្រើសរើស</option>
-						<option value="0" >ជ្រើសរើស</option>
-						<option value="0" >ជ្រើសរើស</option>
-						<option value="0" >ជ្រើសរើស</option>						
-					</select>
+					<select name="main_id" class="form-control">		
 
-				</div>
-			</div>
-
-			<div class="form-group row">
-				<label for="position_id" class="col-sm-2 form-control-label">ខេត្តបម្រើការងារ</label>
-				<div class="col-sm-10">
-					
-					<select name="main_id" class="form-control">	
-						
-						@if($main_id != 0)
-							@php( $lable = DB::table('categoires')->find($main_id) )
-							@if( sizeof($lable) == 1 )
-								<option value="{{ $lable->id }}" >{{ $lable->name }}</option>
-							@endif
+					@if($main_id != 0)
+						@php( $lable = DB::table('main_categoires')->find($main_id) )
+						@if( sizeof($lable) == 1 )
+							<option value="{{ $lable->id }}" >{{ $lable->name }}</option>
 						@endif
-						<option value="0" >ជ្រើសរើស</option>
-						@foreach( $main_categoires as $row)
-							@if($row->id != $main_id)
-								<option value="{{ $row->id }}" >{{ $row->name }}</option>
-							@endif
-						@endforeach
+					@endif
+					<option value="0" >ជ្រើសរើស</option>
+					@foreach( $maincate as $row)
+						@if($row->id != $main_id)
+							<option value="{{ $row->id }}" >{{ $row->name }}</option>
+						@endif
+					@endforeach		
+
+							
 					</select>
 
 				</div>
 			</div>
+
 									
 			<div class="form-group row">
 				<label class="col-sm-2 form-control-label"></label>

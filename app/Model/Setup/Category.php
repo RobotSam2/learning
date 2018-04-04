@@ -14,7 +14,7 @@ class Category extends Model
         return $this->belongsTo('App\Model\User\User', 'user_id');
     }
 
-    public function maincate(){
-        return $this->belongsTo('App\Model\Setup\Maincate', 'main_id');
+    public function product(){
+        return $this->hasMany('App\Model\Setup\Product', 'cate_id');
     }
 }

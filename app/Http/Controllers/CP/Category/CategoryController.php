@@ -10,7 +10,8 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\CamCyber\FunctionController;
 
-use App\Model\Setup\Category as Model;
+use App\Model\Setup\Category;
+use App\Model\Setup\Maincate;
 
 class CategoryController extends Controller
 {
@@ -19,27 +20,29 @@ class CategoryController extends Controller
         $this->route = "cp.category";
     }
     function validObj($id=0){
-        $data = Model::find($id);
+        $data = Category::find($id);
         if(empty($data)){
            echo "Invalide Object"; die;
         }
     }
 
     public function index(){
-        $data = Model::select('*')->orderBy('id', 'DESC')->get();
+        $data = Category::select('*')->orderBy('id', 'DESC')->get();
         
         return view($this->route.'.index', ['route'=>$this->route, 'data'=>$data]);
     }
    
     public function create(){
-        return view($this->route.'.create' , ['route'=>$this->route]);
+        $maincate = Maincate::get();
+        return view($this->route.'.create' , ['route'=>$this->route, 'maincate'=>$maincate]);
     }
     public function store(Request $request) {
         $user_id    = Auth::id();
         $now        = date('Y-m-d H:i:s');
 
         $data = array(
-                    'name' =>   $request->input('name'),
+                    'name'       => $request->input('name'),
+                    'main_id'    => $request->input('main_id'),
                     'creator_id' => $user_id,
                     'created_at' => $now
                 );
@@ -48,17 +51,18 @@ class CategoryController extends Controller
         Validator::make(
                         $request->all(), 
                         [
-                            'name' => 'required',
+                            'name'      => 'required',
+                            'main_id'   => 'exists:main_categoires,id',
                         ])->validate();
        
-		$id=Model::insertGetId($data);
+		$id=Category::insertGetId($data);
         Session::flash('msg', 'Data has been Created!');
 		return redirect(route($this->route.'.edit', $id));
     }
 
     public function edit($id = 0){
         $this->validObj($id);
-        $data = Model::find($id);
+        $data = Category::find($id);
         return view($this->route.'.edit', ['route'=>$this->route, 'id'=>$id, 'data'=>$data]);
     }
 
@@ -69,6 +73,7 @@ class CategoryController extends Controller
 
         $data = array(
                     'name' =>   $request->input('name'),
+                    'main_id'=> $request->input('main_id'),
                     'updater_id' => $user_id,
                     'updated_at' => $now
                 );
@@ -76,17 +81,18 @@ class CategoryController extends Controller
         Validator::make(
                         $request->all(), 
                         [
-                            'name' => 'required'
+                            'name' => 'required',
+                            'main_id'=> 'required',
                         ])->validate();
        
-        Model::where('id', $id)->update($data);
+        Category::where('id', $id)->update($data);
         Session::flash('msg', 'Data has been updated!' );
         return redirect()->back();
 	}
 
     public function trash($id){
-        Model::where('id', $id)->update(['deleter_id' => Auth::id()]);
-        Model::find($id)->delete();
+        Category::where('id', $id)->update(['deleter_id' => Auth::id()]);
+        Category::find($id)->delete();
         Session::flash('msg', 'Data has been delete!' );
         return response()->json([
             'status' => 'success',

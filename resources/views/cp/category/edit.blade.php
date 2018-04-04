@@ -19,13 +19,13 @@
 		{{ method_field('PUT') }}
 		
 		<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="name">ប្រភេទ ផលិតផល</label>
+				<label class="col-sm-2 form-control-label" for="name">ឈ្មោះ</label>
 				<div class="col-sm-10">
 					<input 	id="name"
 							name="name"
 						   	value = "{{$data->name}}"
 						   	type="text"
-						   	placeholder = "សូមបញ្ជូល ប្រភេទ ផលិតផល"
+						   	placeholder = "សូមបញ្ជូលឈ្មោះ"
 						   	class="form-control"
 						   	data-validation="[L>=1, L<=200]"
 							data-validation-message="$ must be between 6 and 18 characters. No special characters allowed." />
@@ -33,8 +33,8 @@
 				</div>
 		</div>
 		<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="name">ចំនួនផលិតផល</label>
-				<div class="col-sm-10">{{ count($data->teachers) }}</div>
+				<label class="col-sm-2 form-control-label" for="name">ចំនួនសិក្ខាកាម</label>
+				<div class="col-sm-10">{{ count($data->category) }}</div>
 		</div>
 	
 		
