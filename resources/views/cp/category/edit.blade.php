@@ -32,6 +32,28 @@
 							
 				</div>
 		</div>
+		
+		<div class="form-group row">
+			<label for="position_id" class="col-sm-2 form-control-label">ប្រភេទផលិតផលដំបូង</label>
+			<div class="col-sm-10">
+				
+				<select name="main_id" class="form-control">		
+				
+				
+				<option value="0" >ជ្រើសរើស</option>
+				@foreach( $maincate as $row)
+					@if($row->id != $id)
+						<option value="{{ $row->id }}" >{{ $row->name }}</option>
+					@endif
+				@endforeach		
+
+						
+				</select>
+
+			</div>
+		</div>
+
+
 		<div class="form-group row">
 				<label class="col-sm-2 form-control-label" for="name">ចំនួនសិក្ខាកាម</label>
 				<div class="col-sm-10">{{ count($data->category) }}</div>

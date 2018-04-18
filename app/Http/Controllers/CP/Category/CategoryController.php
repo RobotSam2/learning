@@ -62,8 +62,9 @@ class CategoryController extends Controller
 
     public function edit($id = 0){
         $this->validObj($id);
+        $maincate = Maincate::get();        
         $data = Category::find($id);
-        return view($this->route.'.edit', ['route'=>$this->route, 'id'=>$id, 'data'=>$data]);
+        return view($this->route.'.edit', ['route'=>$this->route, 'id'=>$id, 'data'=>$data, 'maincate'=>$maincate]);
     }
 
     public function update(Request $request, $id){

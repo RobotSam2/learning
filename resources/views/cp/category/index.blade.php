@@ -20,6 +20,7 @@
 				<th>#</th>
 				<th>ប្រភេទ ផលិតផល</th>
 				<th>ចំនួនផលិតផល</th>
+				<th>នៅក្នុងប្រភេទផលិតផល</th>
 				<th>ថ្ងៃកែតម្រូវ ចុងក្រោយ</th>
 				<th></th>
 			</tr>
@@ -32,7 +33,8 @@
 				<tr>
 					<td>{{ $i++ }}</td>
 					<td>{{ $row->name }}</td>
-					<td>{{ count($row->teachers) }}</td>
+					<td>{{ count($row->product) }}</td>
+					<td>{{ count($row->product) }}</td>
 					<td>{{ $row->updated_at }}</td>
 					<td style="white-space: nowrap; width: 1%;">
 						<div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
