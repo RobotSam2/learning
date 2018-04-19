@@ -11,7 +11,7 @@ use Illuminate\Validation\Rule;
 use App\Http\Controllers\CamCyber\FunctionController;
 
 use App\Model\Setup\Product as Model;
-
+use App\Model\Setup\Category;
 class ProductController extends Controller
 {
     protected $route; 
@@ -32,28 +32,52 @@ class ProductController extends Controller
     }
    
     public function create(){
-        return view($this->route.'.create' , ['route'=>$this->route]);
+        $category = Category::get();
+        return view($this->route.'.create', ['route'=>$this->route.'.create', 'category'=>$category]);    
     }
     public function store(Request $request) {
-        $user_id    = Auth::id();
-        $now        = date('Y-m-d H:i:s');
-
-        $data = array(
-                    'name' =>   $request->input('name'),
-                    'creator_id' => $user_id,
-                    'created_at' => $now
+         $data = array(
+                    'title' =>   $request->input('title'),
+                    'cate_id' =>  $request->input('category'), 
+                    'price' =>  $request->input('price'), 
+                    'description' =>  $request->input('desc'),
+                    'pro_not' =>  $request->input('not')
                 );
-        
         Session::flash('invalidData', $data );
         Validator::make(
                         $request->all(), 
                         [
-                            'name' => 'required',
+                            'title' => 'required',
+                            'cate_id' => 'required',
+                            'price' => 'required',
+                            'desc' => '',
+                            'pro_not' => '',                           
                         ])->validate();
+        
+         //========================================================>>>> Start to create user
+        $user = new User();
+        $user->type_id = 2;
+        $user->password = bcrypt(uniqid());
+        //$user->created_at = now();
+        $user->save();
+        //========================================================>>>> Start to create teacher
+        $product = new Product();
+        $product->cate_id = $category->id;
+        $product->title = $request->input('title');
+        $product->price = $request->input('price');
+        $product->description = $request->input('desc');
+        $product->pro_not = $request->input('not');
+
        
-		$id=Model::insertGetId($data);
+        $avatar = FileUpload::uploadFile($request, 'avatar', 'uploads/alumnae');
+        if($avatar != ""){
+            $teacher->avatar = $avatar;
+        }
+        
+        $teacher->save();
+
         Session::flash('msg', 'Data has been Created!');
-		return redirect(route($this->route.'.edit', $id));
+        return redirect(route($this->route.'.edit', $teacher->id));
     }
 
     public function edit($id = 0){

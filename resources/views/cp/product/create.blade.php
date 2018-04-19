@@ -70,22 +70,22 @@
 	<div class="container-fluid">
 		@include('cp.layouts.error')
 
-		@php ($name = "")
+		@php ($title = "")
 		
        	@if (Session::has('invalidData'))
             @php ($invalidData = Session::get('invalidData'))
-            @php ($name = $invalidData['name'])
+            @php ($title = $invalidData['title'])
             
        	@endif
 		<form id="form" action="{{ route($route.'.store') }}" name="form" method="POST"  enctype="multipart/form-data">
 			{{ csrf_field() }}
 			
 			<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="name">ឈ្មោះ</label>
+				<label class="col-sm-2 form-control-label" for="title">Product Name</label>
 				<div class="col-sm-10">
-					<input 	id="name"
-							name="name"
-						   	value = "{{$name}}"
+					<input 	id="title"
+							name="title"
+						   	value = "{{$title}}"
 						   	type="text"
 						   	placeholder = "សូមបញ្ជូលឈ្មោះ"
 						   	class="form-control"
@@ -96,7 +96,7 @@
 			</div>
 
 			<div class="form-group row">
-				<label for="position_id" class="col-sm-2 form-control-label">ឆ្នាំបញ្ចប់</label>
+				<label for="position_id" class="col-sm-2 form-control-label">Category</label>
 				<div class="col-sm-10">
 					
 					<select name="year_id" class="form-control">	
@@ -109,11 +109,11 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="name">Price</label>
+				<label class="col-sm-2 form-control-label" for="price">Price</label>
 				<div class="col-sm-10">
-					<input 	id="name"
-							name="name"
-						   	value = "{{$name}}"
+					<input 	id="price"
+							name="price"
+						   	value = "{{$price}}"
 						   	type="text"
 						   	placeholder = "សូមបញ្ជូលឈ្មោះ"
 						   	class="form-control"
@@ -123,11 +123,11 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="name">Description</label>
+				<label class="col-sm-2 form-control-label" for="desc">Description</label>
 				<div class="col-sm-10">
-					<input 	id="name"
-							name="name"
-						   	value = "{{$name}}"
+					<input 	id="desc"
+							name="desc"
+						   	value = "{{$desciption}}"
 						   	type="text"
 						   	placeholder = "សូមបញ្ជូលឈ្មោះ"
 						   	class="form-control"
@@ -137,11 +137,11 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="name">Not</label>
+				<label class="col-sm-2 form-control-label" for="not">Not</label>
 				<div class="col-sm-10">
-					<input 	id="name"
-							name="name"
-						   	value = "{{$name}}"
+					<input 	id="not"
+							name="not"
+						   	value = "{{$pro_not}}"
 						   	type="text"
 						   	placeholder = "សូមបញ្ជូលឈ្មោះ"
 						   	class="form-control"
