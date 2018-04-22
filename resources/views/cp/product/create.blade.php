@@ -47,7 +47,7 @@
 	<script>
 		
 		var btnCust = ''; 
-		$("#avatar").fileinput({
+		$("#feature").fileinput({
 		    overwriteInitial: true,
 		    maxFileSize: 1500,
 		    showClose: false,
@@ -69,12 +69,16 @@
 @section ('section-content')
 	<div class="container-fluid">
 		@include('cp.layouts.error')
-
+		@php ($cate_id = 0)
 		@php ($title = "")
+		@php ($price = "")
+		@php ($description = "")
+		@php ($pro_not = "")
 		
        	@if (Session::has('invalidData'))
             @php ($invalidData = Session::get('invalidData'))
             @php ($title = $invalidData['title'])
+			@php ($cate_id = $invalidData['cate_id'])
             
        	@endif
 		<form id="form" action="{{ route($route.'.store') }}" name="form" method="POST"  enctype="multipart/form-data">
@@ -99,11 +103,19 @@
 				<label for="position_id" class="col-sm-2 form-control-label">Category</label>
 				<div class="col-sm-10">
 					
-					<select name="year_id" class="form-control">	
-						
-						
+					<select name="cate_id" class="form-control">	
+						@if($cate_id != 0)
+							@php( $lable = DB::table('categories')->find($cate_id) )
+							@if( sizeof($lable) == 1 )
+								<option value="{{ $lable->id }}" >{{ $lable->name }}</option>
+							@endif
+						@endif
 						<option value="0" >ជ្រើសរើស</option>
-						
+						@foreach($category as $row)
+							@if($row->id != $cate_id)
+								<option value="{{ $row->id }}" >{{ $row->name }}</option>
+							@endif
+						@endforeach						
 					</select>
 
 				</div>
@@ -127,7 +139,7 @@
 				<div class="col-sm-10">
 					<input 	id="desc"
 							name="desc"
-						   	value = "{{$desciption}}"
+						   	value = "{{$description}}"
 						   	type="text"
 						   	placeholder = "សូមបញ្ជូលឈ្មោះ"
 						   	class="form-control"
@@ -154,7 +166,7 @@
 				<label class="col-sm-2 form-control-label" for="email">រូបថត</label>
 				<div class="col-sm-10">
 					<div class="kv-avatar center-block">
-						<input id="avatar" name="avatar" type="file" class="file-loading">
+						<input id="feature" name="feature" type="file" class="file-loading">
 					</div>
 				</div>
 			</div>

@@ -8,8 +8,10 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use App\Http\Controllers\CamCyber\FileUploadController as FileUpload;
 use App\Http\Controllers\CamCyber\FunctionController;
 
+use App\Model\User\User;
 use App\Model\Setup\Product as Model;
 use App\Model\Setup\Category;
 class ProductController extends Controller
@@ -31,53 +33,54 @@ class ProductController extends Controller
         return view($this->route.'.index', ['route'=>$this->route, 'data'=>$data]);
     }
    
-    public function create(){
-        $category = Category::get();
-        return view($this->route.'.create', ['route'=>$this->route.'.create', 'category'=>$category]);    
+    public function create(){      
+        $data = Category::get();
+        return view($this->route.'.create', ['route'=>$this->route, 'category'=>$data]);
     }
     public function store(Request $request) {
          $data = array(
-                    'title' =>   $request->input('title'),
-                    'cate_id' =>  $request->input('category'), 
-                    'price' =>  $request->input('price'), 
-                    'description' =>  $request->input('desc'),
-                    'pro_not' =>  $request->input('not')
+                    'title'         =>   $request->input('title'),
+                    'cate_id'       =>  $request->input('cate_id'), 
+                    'price'         =>  $request->input('price'), 
+                    'description'   =>  $request->input('desc'),
+                    'pro_not'       =>  $request->input('not')
                 );
         Session::flash('invalidData', $data );
         Validator::make(
                         $request->all(), 
                         [
-                            'title' => 'required',
-                            'cate_id' => 'required',
-                            'price' => 'required',
-                            'desc' => '',
-                            'pro_not' => '',                           
+                            'title'     => 'required',
+                            'cate_id'   => 'required',
+                            'price'     => 'required',
+                            'desc'      => '',
+                            'pro_not'   => '',                           
                         ])->validate();
         
          //========================================================>>>> Start to create user
-        $user = new User();
-        $user->type_id = 2;
-        $user->password = bcrypt(uniqid());
-        //$user->created_at = now();
-        $user->save();
+        // $user = new User();
+        // $user->type_id = 2;
+        // $user->password = bcrypt(uniqid());
+        // //$user->created_at = now();
+        // $user->save();
         //========================================================>>>> Start to create teacher
-        $product = new Product();
-        $product->cate_id = $category->id;
+        $product = new Model();
+        // $teacher->user_id = $user->id;
         $product->title = $request->input('title');
+        $product->cate_id = $request->input('cate_id');
         $product->price = $request->input('price');
         $product->description = $request->input('desc');
         $product->pro_not = $request->input('not');
 
        
-        $avatar = FileUpload::uploadFile($request, 'avatar', 'uploads/alumnae');
-        if($avatar != ""){
-            $teacher->avatar = $avatar;
+        $feature = FileUpload::uploadFile($request, 'feature', 'uploads/product');
+        if($feature != ""){
+            $product->feature = $feature;
         }
         
-        $teacher->save();
+        $product->save();
 
         Session::flash('msg', 'Data has been Created!');
-        return redirect(route($this->route.'.edit', $teacher->id));
+        return redirect(route($this->route.'.edit', $product->id));
     }
 
     public function edit($id = 0){
