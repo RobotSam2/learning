@@ -10,8 +10,12 @@ class CreateProductTable extends Migration
     {
     Schema::create('product', function (Blueprint $table) {
             $table->increments('id', 30);
+            $table->integer('creator_id')->unsigned()->index()->nullable();
+            $table->foreign('creator_id')->references('id')->on('users');
+
             $table->integer('cate_id')->unsigned()->index()->nullable();
             $table->foreign('cate_id')->references('id')->on('categories');
+
             $table->string('title', 100);
             $table->string('price', 50);
             $table->string('description', 500);

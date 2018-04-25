@@ -19,11 +19,11 @@
 		{{ method_field('PUT') }}
 		
 		<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="name">ប្រភេទ ផលិតផល</label>
+				<label class="col-sm-2 form-control-label" for="title">ប្រភេទ ផលិតផល</label>
 				<div class="col-sm-10">
-					<input 	id="name"
-							name="name"
-						   	value = "{{$data->name}}"
+					<input 	id="title"
+							name="title"
+						   	value = "{{$data->title}}"
 						   	type="text"
 						   	placeholder = "សូមបញ្ជូល ប្រភេទ ផលិតផល"
 						   	class="form-control"

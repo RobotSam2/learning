@@ -19,8 +19,10 @@ class CreateCategoriesTable extends Migration
             //The field that will appear for almost tables
         $table->integer('creator_id')->unsigned()->index()->nullable();
         $table->foreign('creator_id')->references('id')->on('users');
+
         $table->integer('main_id')->unsigned()->index()->nullable();
         $table->foreign('main_id')->references('id')->on('main_categoires');
+        
         $table->integer('updater_id')->unsigned()->index()->nullable();
         $table->integer('deleter_id')->unsigned()->index()->nullable();
         $table->timestamps();

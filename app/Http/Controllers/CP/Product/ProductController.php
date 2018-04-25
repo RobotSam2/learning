@@ -29,8 +29,24 @@ class ProductController extends Controller
 
     public function index(){
         $data = Model::select('*')->orderBy('id', 'DESC')->get();
-        
-        return view($this->route.'.index', ['route'=>$this->route, 'data'=>$data]);
+        $limit      =   intval(isset($_GET['limit'])?$_GET['limit']:10); 
+        $category = Category::get();
+        $appends=array('limit'=>$limit);
+        $key        =   isset($_GET['key'])?$_GET['key']:""; //Key can be name or phone
+        if( $key != "" ){
+            $appends['key'] = $key;
+            $data = $data->where(function($query) use ($key){
+                $query->where('name', 'like', '%'.$key.'%')->orWhereHas('user', function($query) use ($key){
+                });
+            });
+            
+        }
+        $c_id     =   intval(isset($_GET['c_id'])?$_GET['c_id']:0); 
+        if($c_id != 0){
+            $appends['c_id'] = $c_id;
+            $data = $data->where('c_id', $c_id);
+        } 
+        return view($this->route.'.index', ['route'=>$this->route, 'data'=>$data,'appends'=>$appends, 'category'=>$category]);
     }
    
     public function create(){      
@@ -86,7 +102,8 @@ class ProductController extends Controller
     public function edit($id = 0){
         $this->validObj($id);
         $data = Model::find($id);
-        return view($this->route.'.edit', ['route'=>$this->route, 'id'=>$id, 'data'=>$data]);
+        $cate = Category::get();
+        return view($this->route.'.edit', ['route'=>$this->route, 'id'=>$id, 'data'=>$data, 'categotry'=>$cate]);
     }
 
     public function update(Request $request, $id){
