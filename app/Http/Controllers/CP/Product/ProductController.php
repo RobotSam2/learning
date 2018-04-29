@@ -92,6 +92,10 @@ class ProductController extends Controller
         if($feature != ""){
             $product->feature = $feature;
         }
+         $pro_image = FileUpload::uploadFile($request, 'pro_image', 'uploads/product');
+        if($feature != ""){
+            $product->pro_image = $pro_image;
+        }
         
         $product->save();
 
@@ -112,7 +116,7 @@ class ProductController extends Controller
         $now        = date('Y-m-d H:i:s');
 
         $data = array(
-                    'name' =>   $request->input('name'),
+                    'title' =>   $request->input('title'),
                     'updater_id' => $user_id,
                     'updated_at' => $now
                 );

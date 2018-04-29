@@ -22,7 +22,7 @@
 		    max-width: 220px;
 		}
 		/* .......... */
-		.preview-images-zone {
+.preview-images-zone {
     width: 100%;
     border: 1px solid #ddd;
     min-height: 180px;
@@ -114,9 +114,6 @@
 		}); 
 		
 	</script>
-
-	
-
 	<script>
 		
 		var btnCust = ''; 
@@ -140,7 +137,7 @@
 
 
 		$(document).ready(function() {
-    document.getElementById('pro-image').addEventListener('change', readImage, false);
+    document.getElementById('pro_image').addEventListener('change', readImage, false);
     
     $( ".preview-images-zone" ).sortable();
     
@@ -178,7 +175,7 @@ function readImage() {
 
             picReader.readAsDataURL(file);
         }
-        $("#pro-image").val('');
+        $("#pro_image").val('');
     } else {
         console.log('Browser not support');
     }
@@ -257,15 +254,15 @@ function readImage() {
 			<div class="form-group row">
 				<label class="col-sm-2 form-control-label" for="desc">Description</label>
 				<div class="col-sm-10">
-					<input 	id="desc"
-							name="desc"
-						   	value = "{{$description}}"
-						   	type="text"
-						   	placeholder = "សូមបញ្ជូលឈ្មោះ"
-						   	class="form-control"
-						   	data-validation="[L>=1, L<=200]"
-							data-validation-message="$ must be between 6 and 18 characters. No special characters allowed." />
-							
+					<textarea 
+							name="desc" 
+							id="desc" 
+							cols="30" 
+							rows="10" 
+							class="form-control" 
+							data-validation="[L>=1, L<=200]">
+								{{$description}}
+					</textarea>												
 				</div>
 			</div>
 			<div class="form-group row">
@@ -290,39 +287,29 @@ function readImage() {
 					</div>
 				</div>
 			</div>
-			
-			
+			<!-- Multi file -->
+
+				<fieldset class="form-group">
+					<a href="javascript:void(0)" onclick="$('#pro_image').click()">Upload Image</a>
+					<input type="file" id="pro_image" name="pro_image" style="display: none;" class="form-control" multiple>
+				</fieldset>
+				<div class="preview-images-zone">
+					<!-- <div class="preview-image preview-show-1">
+						<div class="image-cancel" data-no="1">x</div>
+						<div class="image-zone"><img id="pro-img-1" src="https://scontent.fbkk1-5.fna.fbcdn.net/v/t1.0-1/p240x240/19959271_1422340951164915_5064915005517635211_n.jpg?oh=d00714227f317f04f4733895087fca15&oe=5ACE9FFD"></div>
+						<div class="tools-edit-image"><a href="javascript:void(0)" data-no="1" class="btn btn-light btn-edit-image">edit</a></div>
+					</div>					 -->
+				</div>
+	
+			<!-- End Multi File -->
 			<div class="form-group row">
 				<label class="col-sm-2 form-control-label"></label>
-				<div class="col-sm-10">
-					
+				<div class="col-sm-10">					
 					<button type="submit" class="btn btn-success"> <i class="fa fa-plus"></i> បង្កើត</button>
 				</div>
 			</div>
 
-			<div class="container">
-    <fieldset class="form-group">
-        <a href="javascript:void(0)" onclick="$('#pro-image').click()">Upload Image</a>
-        <input type="file" id="pro-image" name="pro-image" style="display: none;" class="form-control" multiple>
-    </fieldset>
-    <div class="preview-images-zone">
-        <div class="preview-image preview-show-1">
-            <div class="image-cancel" data-no="1">x</div>
-            <div class="image-zone"><img id="pro-img-1" src="https://scontent.fbkk1-5.fna.fbcdn.net/v/t1.0-1/p240x240/19959271_1422340951164915_5064915005517635211_n.jpg?oh=d00714227f317f04f4733895087fca15&oe=5ACE9FFD"></div>
-            <div class="tools-edit-image"><a href="javascript:void(0)" data-no="1" class="btn btn-light btn-edit-image">edit</a></div>
-        </div>
-        <div class="preview-image preview-show-2">
-            <div class="image-cancel" data-no="2">x</div>
-            <div class="image-zone"><img id="pro-img-2" src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/flip.jpg"></div>
-            <div class="tools-edit-image"><a href="javascript:void(0)" data-no="2" class="btn btn-light btn-edit-image">edit</a></div>
-        </div>
-        <div class="preview-image preview-show-3">
-            <div class="image-cancel" data-no="3">x</div>
-            <div class="image-zone"><img id="pro-img-3" src="http://i.stack.imgur.com/WCveg.jpg"></div>
-            <div class="tools-edit-image"><a href="javascript:void(0)" data-no="3" class="btn btn-light btn-edit-image">edit</a></div>
-        </div>
-    </div>
-</div>
+				
 		</form>
 	</div>
 

@@ -107,14 +107,12 @@
 			</tr>
 		</thead>
 		<tbody>
-		
-			
 			@php ($i = 1)
 			@foreach ($data as $row)
 				<tr>
 					<td>{{ $i++ }}</td>
 					<td>{{ $row->title }}</td>
-					<td>{{ $row->price }}</td>							
+					<td>{{ $row->price }} USD</td>							
 					<td>@if(isset($row->cate_id)) {{ $row->name }} @endif 1</td>
 					<td><img src="{{ asset($row->feature) }}" alt="Missing Image" class="img img-responsive" style="width:40px;"></td>
 					<td>{{ $row->pro_not }}</td>
