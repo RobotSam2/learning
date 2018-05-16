@@ -110,6 +110,9 @@
 					}
 				}
 			}); 
+			$('.summernote').summernote({
+			airMode: true
+			});
 			
 		}); 
 		
@@ -256,10 +259,8 @@ function readImage() {
 				<div class="col-sm-10">
 					<textarea 
 							name="desc" 
-							id="desc" 
-							cols="30" 
-							rows="10" 
-							class="form-control" 
+							id="desc"
+							class="form-control summernote"
 							data-validation="[L>=1, L<=200]">
 								{{$description}}
 					</textarea>												
@@ -291,7 +292,7 @@ function readImage() {
 
 				<fieldset class="form-group">
 					<a href="javascript:void(0)" onclick="$('#pro_image').click()">Upload Image</a>
-					<input type="file" id="pro_image" name="pro_image" style="display: none;" class="form-control" multiple>
+					<input type="file" id="pro_image" name="pro_image[]" style="display: none;" class="form-control" multiple>
 				</fieldset>
 				<div class="preview-images-zone">
 					<!-- <div class="preview-image preview-show-1">

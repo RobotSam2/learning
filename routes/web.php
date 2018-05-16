@@ -12,8 +12,8 @@
 */
 
 //:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Frontend
-Route::get('/', 				['as' => 'index',			'uses' => 'Frontend\FrontendController@index']);
-
+// Route::get('/', 				['as' => 'index',			'uses' => 'Frontend\FrontendController@index']);
+Route::get('/', 				['as' => 'home',			'uses' => 'Frontend\FrontendController@home']);
 
 //:::::::::::::>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Control Panel
 Route::group(['as' => 'cp.', 'prefix' => 'cp', 'namespace' => 'CP'], function() {
