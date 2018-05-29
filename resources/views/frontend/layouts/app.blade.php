@@ -129,6 +129,7 @@
    </header><!-- <<< End Header >>> -->
 @endsection
 @section ('banner')
+
 <div class="slider-1 clearfix">
     <div class="flex-container">
        <div class="flexslider loading">
@@ -172,8 +173,7 @@
              <img src="{{ asset ('public/frontend/images/img/sliders/slider-1/slider-item-2.png') }}" class="item" data-topimage="8%"/>
            
            </div>
-         </div><!-- End Container -->
-          
+         </div><!-- End Container -->          
          </li><!-- End item -->
          
          
@@ -230,6 +230,95 @@
       </div>
      
    </div><!-- End slider -->
+      <div class="services style-1 home bottom-3">
+     <div class="container clearfix">
+     
+       <div class="one-third column">
+         <div class="item">
+           <div class="circle"><a href="#"><i class="icon-resize-full"></i></a></div>
+           <h3><a href="#">RESPONSIVE WEBSITES</a></h3>
+           <p>We build websites that work across multiple screen sizes and device types. Our web layouts can be viewed accurately across a large number of screen sizes. Try it out by viewing this website on your mobile phone and compare</p>
+         </div>
+       </div><!-- End item -->
+       
+       <div class="one-third column">
+         <div class="item">
+           <div class="circle"><a href="#"><i class="icon-cogs"></i></a></div>
+           <h3><a href="#">LATEST TECHNOLOGIES</a></h3>
+           <p>Our team is passionate about improving our skills as well as understanding and utilizing the latest technologies in an industry that is constantly being redeveloped. With new technologies emerging daily, It is important to keep up with the pace of change. </p>
+         </div>
+       </div><!-- End item -->
+       
+       <div class="one-third column">
+         <div class="item">
+           <div class="circle"><a href="#"><i class="icon-th-large"></i></a></div>
+           <h3><a href="#">SUPPORT TEAM</a></h3>
+           <p>We support our valued customers from our Phnom Penh office, not a call center half a world away. We take all support issues seriously and provide timely responses, we will respond within 24 hours. Guaranteed! We invest in upskilling our team members on a constant basis.</p>
+         </div>
+       </div><!-- End item -->
+       
+     </div><!-- End Container -->
+   </div><!-- End services -->
+   <div class="services style-3 home s-2 bottom-3">
+     <div class="container clearfix">
+     
+       <div class="eight columns bottom-3">
+         <div class="item bottom-3">
+           <div class="circle float-left"><a href="#"><i class="icon-leaf"></i></a></div>
+           <div class="data float-right">
+           <h4><a href="#">WEB DESIGN SERVICES</a></h4>
+           <p><i class="icon-leaf"></i> Content management systems
+           - Virtual shops and eCommerce
+           - Presentation websites
+           - Online catalogues</p>
+           - Portal systems
+           - Any other dynamic website</p>
+           </div> icon-chevron-right
+         </div>
+       </div><!-- End item -->
+       
+       <div class="eight columns bottom-3">
+         <div class="item bottom-3">
+           <div class="circle float-left"><a href="#"><i class="icon-th-large"></i></a></div>
+           <div class="data float-right">
+           <h4><a href="#">GRAPHIC DESIGN SERVICES</a></h4>
+           
+           <p>
+              <i class="icon-chevron-right"></i> Powerpoint presentation <br>
+              <i class="icon-chevron-right"></i> Business Cards <br>
+              <i class="icon-chevron-right"></i> Stationery Design <br>
+              <i class="icon-chevron-right"></i> Print Ads / Magazine <br>
+              <i class="icon-chevron-right"></i> Banners
+           </p>
+
+           </div>
+         </div>
+       </div><!-- End item -->
+       
+       <div class="eight columns bottom-3">
+         <div class="item bottom-3">
+           <div class="circle float-left"><a href="#"><i class="icon-inbox"></i></a></div>
+           <div class="data float-right">
+           <h4><a href="#">DIGITAL MARKETING</a></h4>
+           <p>Lorem Ipsum is simply dummy text of Lorem the printing and typesetting industry. Lorem Ipsum is simply dummy text</p>
+           </div>
+         </div>
+       </div><!-- End item -->
+       
+       <div class="eight columns bottom-3">
+         <div class="item bottom-3">
+           <div class="circle float-left"><a href="#"><i class="icon-resize-full"></i></a></div>
+           <div class="data float-right">
+           <h4><a href="#">Fully Responsive</a></h4>
+           <p>Lorem Ipsum is simply dummy text of Lorem the printing and typesetting industry. Lorem Ipsum is simply dummy text</p>
+           </div>
+         </div>
+       </div><!-- End item -->
+       
+      
+       
+     </div><!-- End Container -->
+   </div><!-- End services -->
 @endsection
 @section('main_service')
 <div class="recent-work clearfix bottom-2">

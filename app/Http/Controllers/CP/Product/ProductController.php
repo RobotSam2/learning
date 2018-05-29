@@ -92,10 +92,7 @@ class ProductController extends Controller
         if($feature != ""){
             $product->feature = $feature;
         }
-         $pro_image = FileUpload::uploadFile($request, 'pro_image', 'uploads/product');
-        if($feature != ""){
-            $product->pro_image = $pro_image;
-        }
+         
         
         $product->save();
 
