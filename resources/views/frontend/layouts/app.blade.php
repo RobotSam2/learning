@@ -36,88 +36,10 @@
           <nav id="menu" class="navigation" role="navigation">
           <a href="#">Show navigation</a><!-- this appear on small devices -->
           <ul id="nav">
-            <li class="active"><a href="index.html">Home</a>
-              <ul>
-                <li><a href="index_2.html">Home 2</a></li>
-                <li><a href="index_3.html">Home 3</a></li>
-                <li><a href="index_4.html">Home 4</a></li>
-                <li><a href="index_mobile_app.html">Home Mobile App</a></li>
-                <li><a href="index_one_page.html">Home One Page</a></li>
-                <li><a href="index_slider_2.html">Slider 2</a></li>
-                <li><a href="index_header_2.html#1">Header Layouts</a>
-                  <ul>
-                   <li><a href="index_header_2.html">Header 2</a></li>
-                   <li><a href="index_header_3.html">Header 3</a></li>
-                   <li><a href="index_header_4.html">Header 4</a></li>
-                   <li><a href="index_header_5.html">Header 5</a></li>
-                   <li><a href="index_header_fixed.html">Header Fixed</a></li>
-                  </ul>
-                </li>
-                <li><a href="index_footer_2.html#1">Footer Layouts</a>
-                  <ul>
-                   <li><a href="index_footer_2.html">Footer 2</a></li>
-                   <li><a href="index_footer_3.html">Footer 3</a></li>
-                   <li><a href="index_footer_4.html">Footer 4</a></li>
-                   <li><a href="index_footer_5.html">Footer 5</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="about.html#1">Pages</a>
-              <ul>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="team.html">Our Team</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="process.html">Process</a></li>
-                <li><a href="sidebar_right.html">Page Right Sidebar</a></li>
-                <li><a href="sidebar_left.html">Page Left Sidebar</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-                <li><a href="full_width.html">Full Width</a></li>
-              </ul>
-            </li>
-            <li><a href="shortcodes.html#2">Features</a>
-              <ul>
-                <li><a href="shortcodes.html">Shortcodes</a></li>
-                <li><a href="icons.html">Icons</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="pricing_tables.html">Pricing Tables</a></li>
-                <li><a href="under_construction.html">Under Construction</a></li>
-                <li><a href="404.html">404 Page</a></li>
-                <li><a href="#3">Third Level Item</a>
-                  <ul>
-    		        <li><a href="#3-1">Sub Item Example 1</a></li>
-                    <li><a href="#3-2">Sub Item Example 2</a>
-                      <ul>
-    		           <li><a href="#3-1">Sub Item Example 1</a></li>
-                       <li><a href="#3-2">Sub Item Example 2</a></li>
-		              </ul>
-                    </li>
-		          </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="portfolio_4.html#4">Portfolio</a>
-              <ul>
-                <li><a href="portfolio_2.html">2 Columns</a></li>
-                <li><a href="portfolio_3.html">3 Columns</a></li>
-                <li><a href="portfolio_4.html">4 Columns</a></li>
-                <li><a href="single_project_1.html">Single Project 1</a></li>
-                <li><a href="single_project_1_full.html">Single 1 without slider</a></li>
-                <li><a href="single_project_2.html">Single Project 2</a></li>
-                <li><a href="single_project_2_full.html">Single 2 without slider</a></li>
-              </ul>
-            </li>
-            <li><a href="blog.html#5">Blog</a>
-              <ul>
-                <li><a href="blog.html">Blog 1</a></li>
-                <li><a href="blog_2.html">Blog 2</a></li>
-                <li><a href="blog_3.html">Blog 3</a></li>
-                <li><a href="blog_3_filter.html">Blog 3 with filter</a></li>
-                <li><a href="single_post.html">Single Post</a></li>
-              </ul>
-            </li>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="team.html">Our Team</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
          </nav>
@@ -236,7 +158,31 @@
        <div class="one-third column">
          <div class="item">
            <div class="circle"><a href="#"><i class="icon-resize-full"></i></a></div>
-           <h3><a href="#">RESPONSIVE WEBSITES</a></h3>
+           <h3><a href="#">WEBSITES DESIGN</a></h3>
+           <p>We build websites that work across multiple screen sizes and device types. Our web layouts can be viewed accurately across a large number of screen sizes. Try it out by viewing this website on your mobile phone and compare</p>
+         </div>
+       </div><!-- End item -->
+       
+       <div class="one-third column">
+         <div class="item">
+           <div class="circle"><a href="#"><i class="icon-cogs"></i></a></div>
+           <h3><a href="#">MMOBILE DESIGN</a></h3>
+           <p>Our team is passionate about improving our skills as well as understanding and utilizing the latest technologies in an industry that is constantly being redeveloped. With new technologies emerging daily, It is important to keep up with the pace of change. </p>
+         </div>
+       </div><!-- End item -->
+       
+       <div class="one-third column">
+         <div class="item">
+           <div class="circle"><a href="#"><i class="icon-th-large"></i></a></div>
+           <h3><a href="#">PAYMENT METHODE</a></h3>
+           <p>We support our valued customers from our Phnom Penh office, not a call center half a world away. We take all support issues seriously and provide timely responses, we will respond within 24 hours. Guaranteed! We invest in upskilling our team members on a constant basis.</p>
+         </div>
+       </div><!-- End item -->
+
+       <div class="one-third column">
+         <div class="item">
+           <div class="circle"><a href="#"><i class="icon-resize-full"></i></a></div>
+           <h3><a href="#">E-COMMERCE</a></h3>
            <p>We build websites that work across multiple screen sizes and device types. Our web layouts can be viewed accurately across a large number of screen sizes. Try it out by viewing this website on your mobile phone and compare</p>
          </div>
        </div><!-- End item -->
@@ -267,13 +213,15 @@
            <div class="circle float-left"><a href="#"><i class="icon-leaf"></i></a></div>
            <div class="data float-right">
            <h4><a href="#">WEB DESIGN SERVICES</a></h4>
-           <p><i class="icon-leaf"></i> Content management systems
-           - Virtual shops and eCommerce
-           - Presentation websites
-           - Online catalogues</p>
-           - Portal systems
-           - Any other dynamic website</p>
-           </div> icon-chevron-right
+              <p>
+                <i class="icon-hand-right"></i> Content management systems<br>
+                <i class="icon-hand-right"></i> Virtual shops and eCommerce<br>
+                <i class="icon-hand-right"></i> Presentation websites<br>
+                <i class="icon-hand-right"></i> Online catalogues<br>
+                <i class="icon-hand-right"></i> Portal systems<br>
+                <i class="icon-hand-right"></i> Any other dynamic website
+              </p>
+           </div>
          </div>
        </div><!-- End item -->
        
@@ -281,14 +229,15 @@
          <div class="item bottom-3">
            <div class="circle float-left"><a href="#"><i class="icon-th-large"></i></a></div>
            <div class="data float-right">
-           <h4><a href="#">GRAPHIC DESIGN SERVICES</a></h4>
-           
-           <p>
-              <i class="icon-chevron-right"></i> Powerpoint presentation <br>
-              <i class="icon-chevron-right"></i> Business Cards <br>
-              <i class="icon-chevron-right"></i> Stationery Design <br>
-              <i class="icon-chevron-right"></i> Print Ads / Magazine <br>
-              <i class="icon-chevron-right"></i> Banners
+           <h4><a href="#">GRAPHIC DESIGN SERVICES</a></h4>           
+           <p>  
+              <i class="icon-hand-right"></i> Logo design <br>
+              <i class="icon-hand-right"></i> Flyers & Brochures <br>
+              <i class="icon-hand-right"></i> Business Cards <br>
+              <i class="icon-hand-right"></i> Stationery Design <br>
+              <i class="icon-hand-right"></i> Powerpoint presentation<br>
+              <i class="icon-hand-right"></i> Print Ads / Magazine<br>
+              <i class="icon-hand-right"></i> Banners
            </p>
 
            </div>
@@ -300,7 +249,13 @@
            <div class="circle float-left"><a href="#"><i class="icon-inbox"></i></a></div>
            <div class="data float-right">
            <h4><a href="#">DIGITAL MARKETING</a></h4>
-           <p>Lorem Ipsum is simply dummy text of Lorem the printing and typesetting industry. Lorem Ipsum is simply dummy text</p>
+           <p>
+              <i class="icon-hand-right"></i> Powerpoint presentation <br>
+              <i class="icon-hand-right"></i> Business Cards <br>
+              <i class="icon-hand-right"></i> Stationery Design <br>
+              <i class="icon-hand-right"></i> Print Ads / Magazine <br>
+              <i class="icon-hand-right"></i> Banners
+           </p>
            </div>
          </div>
        </div><!-- End item -->
@@ -322,162 +277,7 @@
 @endsection
 @section('main_service')
 <div class="recent-work clearfix bottom-2">
-    <div class="slidewrap1" >
     
-      <!-- <div class="sixteen columns"> 
-       <h3 class="title bottom-2">Recent Work</h3> 
-      </div> -->
-      <h3 class="service">Our Service</h3>
-      
-      <ul class="slider" id="sliderName1">
-      
-      <li class="slide">
-      
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-1.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-2.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-3.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-4.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-5.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-6.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        </li><!-- End slide -->
-        
-        <li class="slide">
-      
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-1.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-2.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-3.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-4.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-5.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        <!-- item -->
-        <div class="one-third column item">
-          <a href="single_project_1.html">
-          <img src="{{ asset ('public/frontend/images/img/portfolio/thumb-6.jpg') }}" alt="" class="pic" />
-          <div class="img-caption">
-          <div class="desc"><h3>Apple Creative</h3><p>Illustration, 3d</p><span>+</span></div>
-          </div><!-- hover effect -->
-          </a>
-        </div>
-        <!-- End -->
-        
-        </li><!-- End slide -->
-        
-        </ul>
-      
-      </div><!-- End slidewrap -->
-    
-     </div><!-- End recent-work -->
-    
-     <div class="sixteen columns"><hr class="line bottom-3"></div><!-- End line -->
      
      <div class="featured-clients clearfix bottom-2">
      
@@ -506,8 +306,8 @@
         </ul>
       
        </div><!-- End slidewrap -->
-     
-     </div><!-- End features-clients -->
+     </div>
+    </div><!-- End features-clients -->
 @endsection
 @section('footer')
 <footer>
