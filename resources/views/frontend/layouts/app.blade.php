@@ -38,7 +38,7 @@
           <ul id="nav">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="services.html">Blog</a></li>
             <li><a href="team.html">Our Team</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -61,10 +61,9 @@
            <div class="container">
            <div class="sixteen columns contain">
             
-             <h2 data-toptitle="20%">Invention Theme for Business Agency and Creative Portfolios</h2>
-             <p data-bottomtext="39%">
-             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-             standard dummy text ever since the 1500s</p>
+             <!-- <h2 data-toptitle="20%">Invention Theme for Business Agency and Creative Portfolios</h2> -->
+             <p data-bottomtext="50%">
+            We propose a large range of services not only intended to private companies but also to associations and public organizations. our company has developed noteworthy activity in the outsourcing market.  Our ambition is to develop technology in Cambodia and abroad adapted to all kind of activities.</p>
              <div class="links" data-bottomlinks="20%">
                <a href="#" class="button medium normal">Read More</a>
                <a href="#" class="button medium color">Purchase Now</a>
@@ -83,11 +82,10 @@
           <div class="container">
            <div class="sixteen columns contain">
             
-             <h2 data-toptitle="20%">Invention Theme for Business Agency and Creative Portfolios</h2>
-             <p data-bottomtext="39%">
-             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-             standard dummy text ever since the 1500s</p>
-             <div class="links" data-bottomlinks="20%">
+             <h2 data-toptitle="15%">Invention Theme for Business Agency and Creative Portfolios</h2>
+             <p data-bottomtext="27%">
+             We take risks. Sometimes they pay off and sometimes they don't. But what matters is that we've built an environment where any crazy idea you have can be the one that makes the company. If you're smart and hardworking, risks pay off more often than not, that's how plantwear brand started its company and now they are one of the best jewelry company.</p>
+             <div class="links" data-bottomlinks="10%">
                <a href="#" class="button medium normal">Read More</a>
                <a href="#" class="button medium color">Purchase Now</a>
              </div>
@@ -152,54 +150,61 @@
       </div>
      
    </div><!-- End slider -->
-      <div class="services style-1 home bottom-3">
-     <div class="container clearfix">
-     
+    
+    <div class="services style-1 home bottom-3">     
+      <center><h3>Our Service</h3></center>  
+     <div class="container clearfix">        
        <div class="one-third column">
-         <div class="item">
-           <div class="circle"><a href="#"><i class="icon-resize-full"></i></a></div>
-           <h3><a href="#">WEBSITES DESIGN</a></h3>
-           <p>We build websites that work across multiple screen sizes and device types. Our web layouts can be viewed accurately across a large number of screen sizes. Try it out by viewing this website on your mobile phone and compare</p>
+         <div class="item">           
+            <a href="#">
+                  <img src="{{ asset ('public/frontend/images/services/web_design.jpg') }}" class="item" data-topimage="9%"/>
+            </a>
+           <h3><a href="#">WEBSITES DESIGN</a></h3>           
          </div>
        </div><!-- End item -->
        
        <div class="one-third column">
-         <div class="item">
-           <div class="circle"><a href="#"><i class="icon-cogs"></i></a></div>
-           <h3><a href="#">MMOBILE DESIGN</a></h3>
-           <p>Our team is passionate about improving our skills as well as understanding and utilizing the latest technologies in an industry that is constantly being redeveloped. With new technologies emerging daily, It is important to keep up with the pace of change. </p>
+         <div class="item">           
+            <a href="#">
+                  <img src="{{ asset ('public/frontend/images/services/mobiledesign.png') }}" class="item" data-topimage="9%"/>
+            </a>
+           <h3><a href="#">MOBILE DESIGN</a></h3>           
          </div>
        </div><!-- End item -->
        
        <div class="one-third column">
-         <div class="item">
-           <div class="circle"><a href="#"><i class="icon-th-large"></i></a></div>
+         <div class="item">           
+            <a href="#">
+                  <img src="{{ asset ('public/frontend/images/services/paymetmethod.png') }}" class="item" data-topimage="9%"/>
+            </a>
            <h3><a href="#">PAYMENT METHODE</a></h3>
-           <p>We support our valued customers from our Phnom Penh office, not a call center half a world away. We take all support issues seriously and provide timely responses, we will respond within 24 hours. Guaranteed! We invest in upskilling our team members on a constant basis.</p>
          </div>
        </div><!-- End item -->
 
        <div class="one-third column">
-         <div class="item">
-           <div class="circle"><a href="#"><i class="icon-resize-full"></i></a></div>
-           <h3><a href="#">E-COMMERCE</a></h3>
-           <p>We build websites that work across multiple screen sizes and device types. Our web layouts can be viewed accurately across a large number of screen sizes. Try it out by viewing this website on your mobile phone and compare</p>
+         <div class="item">           
+            <a href="#">
+                  <img src="{{ asset ('public/frontend/images/services/ecommerce.png') }}" class="item" data-topimage="9%"/>
+            </a>
+           <h3><a href="#">E-COMMERCE</a></h3>           
          </div>
        </div><!-- End item -->
        
        <div class="one-third column">
-         <div class="item">
-           <div class="circle"><a href="#"><i class="icon-cogs"></i></a></div>
-           <h3><a href="#">LATEST TECHNOLOGIES</a></h3>
-           <p>Our team is passionate about improving our skills as well as understanding and utilizing the latest technologies in an industry that is constantly being redeveloped. With new technologies emerging daily, It is important to keep up with the pace of change. </p>
+         <div class="item">           
+            <a href="#">
+                  <img src="{{ asset ('public/frontend/images/services/last_tecnology.png') }}" class="item" data-topimage="9%"/>
+            </a>
+           <h3><a href="#">LATEST TECHNOLOGIES</a></h3>           
          </div>
        </div><!-- End item -->
        
        <div class="one-third column">
-         <div class="item">
-           <div class="circle"><a href="#"><i class="icon-th-large"></i></a></div>
-           <h3><a href="#">SUPPORT TEAM</a></h3>
-           <p>We support our valued customers from our Phnom Penh office, not a call center half a world away. We take all support issues seriously and provide timely responses, we will respond within 24 hours. Guaranteed! We invest in upskilling our team members on a constant basis.</p>
+         <div class="item">           
+            <a href="#">
+                  <img src="{{ asset ('public/frontend/images/services/spport_team.png') }}" class="item" data-topimage="9%"/>
+            </a>
+           <h3><a href="#">SUPPORT TEAM</a></h3>           
          </div>
        </div><!-- End item -->
        
@@ -210,16 +215,20 @@
      
        <div class="eight columns bottom-3">
          <div class="item bottom-3">
-           <div class="circle float-left"><a href="#"><i class="icon-leaf"></i></a></div>
+           <div class="circle float-left">
+            <a href="#">
+                <img src="{{ asset ('public/frontend/images/services/responsive.png') }}" class="item" data-topimage="9%"/>  
+            </a>
+           </div>
            <div class="data float-right">
            <h4><a href="#">WEB DESIGN SERVICES</a></h4>
               <p>
-                <i class="icon-hand-right"></i> Content management systems<br>
-                <i class="icon-hand-right"></i> Virtual shops and eCommerce<br>
-                <i class="icon-hand-right"></i> Presentation websites<br>
-                <i class="icon-hand-right"></i> Online catalogues<br>
-                <i class="icon-hand-right"></i> Portal systems<br>
-                <i class="icon-hand-right"></i> Any other dynamic website
+                <i class="icon-circle-arrow-right"></i> Content management systems<br>
+                <i class="icon-circle-arrow-right"></i> Virtual shops and eCommerce<br>
+                <i class="icon-circle-arrow-right"></i> Presentation websites<br>
+                <i class="icon-circle-arrow-right"></i> Online catalogues<br>
+                <i class="icon-circle-arrow-right"></i> Portal systems<br>
+                <i class="icon-circle-arrow-right"></i> Any other dynamic website
               </p>
            </div>
          </div>
@@ -227,17 +236,21 @@
        
        <div class="eight columns bottom-3">
          <div class="item bottom-3">
-           <div class="circle float-left"><a href="#"><i class="icon-th-large"></i></a></div>
+           <div class="circle float-left">
+            <a href="#">
+                <img src="{{ asset ('public/frontend/images/services/cicle_design.png') }}" class="item" data-topimage="9%"/>  
+            </a>
+           </div>
            <div class="data float-right">
            <h4><a href="#">GRAPHIC DESIGN SERVICES</a></h4>           
            <p>  
-              <i class="icon-hand-right"></i> Logo design <br>
-              <i class="icon-hand-right"></i> Flyers & Brochures <br>
-              <i class="icon-hand-right"></i> Business Cards <br>
-              <i class="icon-hand-right"></i> Stationery Design <br>
-              <i class="icon-hand-right"></i> Powerpoint presentation<br>
-              <i class="icon-hand-right"></i> Print Ads / Magazine<br>
-              <i class="icon-hand-right"></i> Banners
+              <i class="icon-circle-arrow-right"></i> Logo design <br>
+              <i class="icon-circle-arrow-right"></i> Flyers & Brochures <br>
+              <i class="icon-circle-arrow-right"></i> Business Cards <br>
+              <i class="icon-circle-arrow-right"></i> Stationery Design <br>
+              <i class="icon-circle-arrow-right"></i> Powerpoint presentation<br>
+              <i class="icon-circle-arrow-right"></i> Print Ads / Magazine<br>
+              <i class="icon-circle-arrow-right"></i> Banners
            </p>
 
            </div>
@@ -246,15 +259,19 @@
        
        <div class="eight columns bottom-3">
          <div class="item bottom-3">
-           <div class="circle float-left"><a href="#"><i class="icon-inbox"></i></a></div>
+           <div class="circle float-left">
+            <a href="#">
+                <img src="{{ asset ('public/frontend/images/services/degital_marketing.png') }}" class="item" data-topimage="9%"/>  
+            </a>
+           </div>
            <div class="data float-right">
-           <h4><a href="#">DIGITAL MARKETING</a></h4>
+           <h4><a href="#">DIGITAL MARKETING SERVICES</a></h4>
            <p>
-              <i class="icon-hand-right"></i> Powerpoint presentation <br>
-              <i class="icon-hand-right"></i> Business Cards <br>
-              <i class="icon-hand-right"></i> Stationery Design <br>
-              <i class="icon-hand-right"></i> Print Ads / Magazine <br>
-              <i class="icon-hand-right"></i> Banners
+              <i class="icon-circle-arrow-right"></i> Powerpoint presentation <br>
+              <i class="icon-circle-arrow-right"></i> Business Cards <br>
+              <i class="icon-circle-arrow-right"></i> Stationery Design <br>
+              <i class="icon-circle-arrow-right"></i> Print Ads / Magazine <br>
+              <i class="icon-circle-arrow-right"></i> Banners
            </p>
            </div>
          </div>
@@ -262,10 +279,20 @@
        
        <div class="eight columns bottom-3">
          <div class="item bottom-3">
-           <div class="circle float-left"><a href="#"><i class="icon-resize-full"></i></a></div>
+           <div class="circle float-left">
+            <a href="#">
+                <img src="{{ asset ('public/frontend/images/services/mobile_design.png') }}" class="item" data-topimage="9%"/>  
+            </a>
+           </div>
            <div class="data float-right">
-           <h4><a href="#">Fully Responsive</a></h4>
-           <p>Lorem Ipsum is simply dummy text of Lorem the printing and typesetting industry. Lorem Ipsum is simply dummy text</p>
+           <h4><a href="#">MOBILE PLATFORM SERVICES</a></h4>
+           <p>
+              <i class="icon-circle-arrow-right"></i> Powerpoint presentation <br>
+              <i class="icon-circle-arrow-right"></i> Business Cards <br>
+              <i class="icon-circle-arrow-right"></i> Stationery Design <br>
+              <i class="icon-circle-arrow-right"></i> Print Ads / Magazine <br>
+              <i class="icon-circle-arrow-right"></i> Banners
+           </p>
            </div>
          </div>
        </div><!-- End item -->
