@@ -22,6 +22,9 @@
 		Route::group(['as' => 'product.',  'prefix' => 'product', 'namespace' => 'Product'], function () {
 			require(__DIR__.'/product.php');
 		});
+		Route::group(['as' => 'service.',  'prefix' => 'service', 'namespace' => 'Service'], function () {
+			require(__DIR__.'/service.php');
+		});
 		Route::group(['as' => 'major.',  'prefix' => 'major', 'namespace' => 'Major'], function () {
 			require(__DIR__.'/major.php');
 		});

@@ -107,6 +107,15 @@
                 </a>
             </li>
 
+            <li class="red @yield('active-main-menu-service')">
+                <a href="{{ route('cp.service.index') }}">
+                <span>
+                    <i class="fa fa-cart-arrow-down"></i>
+                    <span class="lbl">សេវាកម្ម</span>
+                </span>
+                </a>
+            </li>
+
             <li class="red @yield('active-main-menu-major')">
                 <a href="{{ route('cp.major.index') }}">
                 <span>
