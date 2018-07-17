@@ -1,7 +1,7 @@
 @extends('cp/layouts.app')
-@section('active-main-menu-product', 'opened')
+@section('active-main-menu-service', 'opened')
 @section('title')
-	ប្រភេទ ផលិតផល: @yield('section-title')
+	ប្រភេទ សេវាកម្ម: @yield('section-title')
 @endsection
 
 @section ('appheadercss')
@@ -19,7 +19,7 @@
 			<div class="tbl">
 				<div class="tbl-row">
 					<div class="tbl-cell">
-						<h3>ផលិតផល <span> <i class="fa fa-long-arrow-right"></i> @yield('section-title')</span></h3> 
+						<h3>សេវាកម្ម <span> <i class="fa fa-long-arrow-right"></i> @yield('section-title')</span></h3> 
 					</div>
 					<div class="tbl-cell tbl-cell-action">
 						<a href="{{ route($route.'.index') }}"  class="tabledit-delete-button btn btn-sm btn-primary" style="float: none;   @yield("display-btn-add-new") "><span class="fa fa-arrow-left"></span></a>

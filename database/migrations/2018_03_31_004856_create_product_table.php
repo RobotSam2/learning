@@ -14,15 +14,13 @@ class CreateProductTable extends Migration
             $table->foreign('creator_id')->references('id')->on('users');
 
             $table->integer('cate_id')->unsigned()->index()->nullable();
-            $table->foreign('cate_id')->references('id')->on('categories');
+            $table->foreign('cate_id')->references('id')->on('category');
 
             $table->string('title', 100);
             $table->string('price', 50);
             $table->string('description', 500);
             $table->string('feature_img', 100)->nullable();
-            $table->string('image_one', 100)->nullable();
-            $table->string('image_two', 100)->nullable();
-            $table->string('image_three', 100)->nullable();
+            $table->string('image_pro', 100)->nullable();          
             $table->string('pro_not')->nullable();
             $table->boolean('status')->default(1);
             $table->integer('creator_id')->unsigned()->index()->nullable();
