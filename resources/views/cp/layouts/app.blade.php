@@ -115,6 +115,14 @@
                 </span>
                 </a>
             </li>
+            <li class="red @yield('active-main-menu-slider')">
+                <a href="{{ route('cp.slider.index') }}">
+                <span>
+                    <i class="fa fa-external-link"></i>
+                    <span class="lbl">ស្លាយ</span>
+                </span>
+                </a>
+            </li>
 
             <li class="red @yield('active-main-menu-major')">
                 <a href="{{ route('cp.major.index') }}">

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\CP\Service;
+namespace App\Http\Controllers\CP\Slider;
 
 use Auth;
 use Session;
@@ -12,8 +12,8 @@ use App\Http\Controllers\CamCyber\FileUploadController as FileUpload;
 use App\Http\Controllers\CamCyber\FunctionController;
 
 use App\Model\User\User;
-use App\Model\Setup\Service as Model;
-class ServiceController extends Controller
+use App\Model\Setup\Slider as Model;
+class SliderController extends Controller
 {
     protected $route; 
     public function __construct(){

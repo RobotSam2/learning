@@ -25,6 +25,9 @@
 		Route::group(['as' => 'service.',  'prefix' => 'service', 'namespace' => 'Service'], function () {
 			require(__DIR__.'/service.php');
 		});
+		Route::group(['as' => 'slider.',  'prefix' => 'slider', 'namespace' => 'Slider'], function () {
+			require(__DIR__.'/slider.php');
+		});
 		Route::group(['as' => 'major.',  'prefix' => 'major', 'namespace' => 'Major'], function () {
 			require(__DIR__.'/major.php');
 		});
