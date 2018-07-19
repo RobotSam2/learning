@@ -18,22 +18,22 @@
 		<thead>
 			<tr>
 				<th>#</th>
-				<th>title</th>
-				<th>ចំនួនសិក្ខាកាម</th>
-				<th>ថ្ងៃកែតម្រូវ ចុងក្រោយ</th>
+				<th>ចំណងជើង</th>
+				<th>ទំព័រ</th>
+				<th>រូបភាព</th>
 				<th></th>
 			</tr>
 		</thead>
 		<tbody>
 		
 			
-			@php ($i = 1)
-			@foreach ($data as $row)
+			
+			@foreach ($data as $key => $row)
 				<tr>
-					<td>{{ $i++ }}</td>
+					<td>{{ $key+1 }}</td>
 					<td>{{ $row->title }}</td>
-					<td>{{ count($row->teachers) }}</td>
-					<td>{{ $row->updated_at }}</td>
+					<td>{{ $row->in_page }}</td>
+					<td><img src="{{ asset($row->iamge) }}" alt="Missing Image" class="img img-responsive" style="width:40px;"></td>
 					<td style="white-space: nowrap; width: 1%;">
 						<div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
                            	<div class="btn-group btn-group-sm" style="float: none;">
