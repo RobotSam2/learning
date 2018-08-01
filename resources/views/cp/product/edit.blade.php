@@ -109,6 +109,10 @@
 					}
 				}
 			}); 
+
+			$('.summernote').summernote({
+			airMode: true
+			});
 			
 		}); 
 		
@@ -127,7 +131,7 @@
 		    removeTitle: 'Cancel or reset changes',
 		    elErrorContainer: '#kv-avatar-errors-2',
 		    msgErrorClass: 'alert alert-block alert-danger',
-		    defaultPreviewContent: '<img src="{{ asset($data->feature) }}" alt="Missing Image" class="img img-responsive"><span class="text-muted">Click to select <br /><i style="font-size:12px">Image dimesion must be 200x165 with .jpg or .png type</i></span>',
+		    defaultPreviewContent: '<img src="{{ asset($data->feature_img) }}" alt="Missing Image" class="img img-responsive"><span class="text-muted">Click to select <br /><i style="font-size:12px">Image dimesion must be 200x165 with .jpg or .png type</i></span>',
 		    layoutTemplates: {main2: '{preview} ' +  btnCust + ' {remove} {browse}'},
 		    allowedFileExtensions: ["jpg", "png", "gif"]
 		});
@@ -247,7 +251,7 @@ function readImage() {
 						id="desc" 
 						cols="10" 
 						rows="5" 
-						class="form-control" 
+						class="form-control summernote" 
 						data-validation="[L>=1, L<=200]">
 							{{$data->description }}
 				</textarea>												
@@ -262,7 +266,7 @@ function readImage() {
 						id="not" 
 						cols="10" 
 						rows="2" 
-						class="form-control" 
+						class="form-control summernote" 
 						data-validation="[L>=1, L<=200]">
 							{{$data->pro_not }}
 				</textarea>												

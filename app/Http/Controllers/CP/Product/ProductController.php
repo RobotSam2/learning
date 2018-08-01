@@ -32,11 +32,14 @@ class ProductController extends Controller
         $limit      =   intval(isset($_GET['limit'])?$_GET['limit']:10); 
         $category = Category::get();
         $appends=array('limit'=>$limit);
-        $key        =   isset($_GET['key'])?$_GET['key']:""; //Key can be name or phone
+
+
+        $key        =   isset($_GET['key'])?$_GET['key']:""; //Key can be title or price
         if( $key != "" ){
             $appends['key'] = $key;
             $data = $data->where(function($query) use ($key){
-                $query->where('name', 'like', '%'.$key.'%')->orWhereHas('user', function($query) use ($key){
+                $query->where('title', 'like', '%'.$key.'%')->orWhereHas('product', function($query) use ($key){
+                    $query->where('price', 'like', '%'.$key.'%');
                 });
             });
             
@@ -55,7 +58,7 @@ class ProductController extends Controller
     }
     public function store(Request $request) {
          $data = array(
-                    'title'         =>   $request->input('title'),
+                    'title'         =>  $request->input('title'),
                     'cate_id'       =>  $request->input('cate_id'), 
                     'price'         =>  $request->input('price'), 
                     'description'   =>  $request->input('desc'),
@@ -90,7 +93,7 @@ class ProductController extends Controller
        
         $feature = FileUpload::uploadFile($request, 'feature', 'uploads/product');
         if($feature != ""){
-            $product->feature = $feature;
+            $product->feature_img = $feature;
         }
          
         
@@ -121,7 +124,7 @@ class ProductController extends Controller
         Validator::make(
                         $request->all(), 
                         [
-                            'name' => 'required'
+                            'title' => 'required'
                         ])->validate();
        
         Model::where('id', $id)->update($data);

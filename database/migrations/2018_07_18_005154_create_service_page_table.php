@@ -22,6 +22,8 @@ class CreateServicePageTable extends Migration
             $table->string('in_page', 200);         
             $table->integer('creator_id')->unsigned()->index()->nullable();
             $table->foreign('creator_id')->references('id')->on('users');
+            $table->integer('updater_id')->unsigned()->index()->nullable();
+            $table->integer('deleter_id')->unsigned()->index()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

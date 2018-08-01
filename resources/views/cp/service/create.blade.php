@@ -155,7 +155,7 @@ var btnCust = '';
 			{{ csrf_field() }}
 			
 			<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="title">Page Title</label>
+				<label class="col-sm-2 form-control-label" for="title">ចំណងជើង ទំព័រ</label>
 				<div class="col-sm-10">
 					<input 	id="title"
 							name="title"
@@ -169,7 +169,7 @@ var btnCust = '';
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="price">In Page</label>
+				<label class="col-sm-2 form-control-label" for="price">នៅក្នុងទំព័រ</label>
 				<div class="col-sm-10">
 					<input 	id="inpage"
 							name="inpage"
@@ -183,7 +183,7 @@ var btnCust = '';
 				</div>
 			</div>
 			<div class="form-group row">
-				<label class="col-sm-2 form-control-label" for="desc">Description</label>
+				<label class="col-sm-2 form-control-label" for="desc">ពណ័នាពីផលិតផល</label>
 				<div class="col-sm-10">
 					<textarea 
 							name="desc" 

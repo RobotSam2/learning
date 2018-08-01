@@ -274,7 +274,7 @@ function readImage() {
 						   	value = "{{$pro_not}}"
 						   	type="text"
 						   	placeholder = "សូមបញ្ជូលឈ្មោះ"
-						   	class="form-control"
+						   	class="form-control summernote"
 						   	data-validation="[L>=1, L<=200]"
 							data-validation-message="$ must be between 6 and 18 characters. No special characters allowed." />
 							

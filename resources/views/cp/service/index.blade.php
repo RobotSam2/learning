@@ -24,17 +24,14 @@
 				<th></th>
 			</tr>
 		</thead>
-		<tbody>
-		
-			
-			
+		<tbody>							
 			@foreach ($data as $key => $row)
 				<tr>
 					<td>{{ $key+1 }}</td>
 					<td>{{ $row->title }}</td>
 					<td>{{ $row->in_page }}</td>
-					<td><img src="{{ asset($row->iamge) }}" alt="Missing Image" class="img img-responsive" style="width:40px;"></td>
-					<td style="white-space: nowrap; width: 1%;">
+					<td><img src="{{ asset($row->image) }}" alt="Missing Image" class="img img-responsive" style="width:40px;"></td>
+					<td style="white-space: nowrap; width: 2%;">
 						<div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
                            	<div class="btn-group btn-group-sm" style="float: none;">
                            		<a href="{{ route($route.'.edit', $row->id) }}" class="tabledit-edit-button btn btn-sm btn-success" style="float: none;"><span class="fa fa-eye"></span></a>

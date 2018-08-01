@@ -23,9 +23,9 @@ class UsersTableSeeder extends Seeder
        
         //Seeding admin
         DB::table('users')->insert([
-                [ 'type_id'=>1, 'email' => 'admin@camcyber.com', 'phone' => '0965416704', 'password' => bcrypt('123456')],
-                [ 'type_id'=>1, 'email' => 'admin2@camcyber.com', 'phone' => '0111112', 'password' => bcrypt('xxxxxx')],
-                [ 'type_id'=>1, 'email' => 'admin3@camcyber.com', 'phone' => '0111113', 'password' => bcrypt('xxxxxx')],
+                [ 'type_id'=>1, 'email' => 'admin@admin.com', 'phone' => '087988771', 'password' => bcrypt('123456')],
+                [ 'type_id'=>1, 'email' => 'admin2@admin.com', 'phone' => '0888707171', 'password' => bcrypt('123456')],
+                [ 'type_id'=>1, 'email' => 'admin3@admin.com', 'phone' => '0888707171', 'password' => bcrypt('123456')],
             ]);
         DB::table('admins')->insert(
             [

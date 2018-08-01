@@ -55,7 +55,7 @@
 
 <div class="row">
 	<div class="col-md-6">
-		<input id="key" type='text' class="form-control" value="{{ isset($appends['key'])?$appends['key']:'' }}" placeholder="ឈ្មោះឬទូរស័ព្ទ...." />
+		<input id="key" type='text' class="form-control" value="{{ isset($appends['key'])?$appends['key']:'' }}" placeholder="ចំណងជើងផលិតផល, តម្លៃ...." />
 	</div>
 	<div class="col-md-3">
 		<select id="cate_id" class="form-control">
@@ -67,7 +67,7 @@
 				@endif
 			@endif
 			<option value="0" >ប្រភេទផលិតផល</option>
-			@foreach( $category as $row)
+			@foreach( $category as $key => $row)
 				@if($row->id != $cate_id)
 					<option value="{{ $row->id }}" >{{ $row->name }}</option>
 				@endif
@@ -112,11 +112,13 @@
 				<tr>
 					<td>{{ $i++ }}</td>
 					<td>{{ $row->title }}</td>
-					<td>{{ $row->price }} USD</td>							
-					<td>@if(isset($row->cate_id)) {{ $row->name }} @endif 1</td>
-					<td><img src="{{ asset($row->feature) }}" alt="Missing Image" class="img img-responsive" style="width:40px;"></td>
+					<td>{{ $row->price }} ដុល្លា</td>							
+					<td>@if(isset($row->cate_id)) {{ $row->name }} @endif  sss
+					
+					</td>
+					<td><img src="{{ asset($row->feature_img) }}" alt="Missing Image" class="img img-responsive" style="width:40px;"></td>
 					<td>{{ $row->pro_not }}</td>
-					<td>{{ $row->updated_at }}</td>
+					<td>{{ date ("j M, Y g:i A", strtotime($row->updated_at)) }}</td>
 					<td style="white-space: nowrap; width: 1%;">
 						<div class="tabledit-toolbar btn-toolbar" style="text-align: left;">
                            	<div class="btn-group btn-group-sm" style="float: none;">

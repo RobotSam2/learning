@@ -10,8 +10,6 @@ class CreateProductTable extends Migration
     {
     Schema::create('product', function (Blueprint $table) {
             $table->increments('id', 30);
-            $table->integer('creator_id')->unsigned()->index()->nullable();
-            $table->foreign('creator_id')->references('id')->on('users');
 
             $table->integer('cate_id')->unsigned()->index()->nullable();
             $table->foreign('cate_id')->references('id')->on('category');
@@ -25,6 +23,8 @@ class CreateProductTable extends Migration
             $table->boolean('status')->default(1);
             $table->integer('creator_id')->unsigned()->index()->nullable();
             $table->foreign('creator_id')->references('id')->on('users');
+            $table->integer('updater_id')->unsigned()->index()->nullable();
+            $table->integer('deleter_id')->unsigned()->index()->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
